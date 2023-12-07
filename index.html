@@ -11,6 +11,8 @@
 
 	<!-- Chemin vers Feuille de style -->
 	<link rel="stylesheet" href="./replace_style.css">
+
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -80,16 +82,17 @@
 			// Modifie le contenu de la nouvelle div avec le nom de l'étudiant
 			nouvelleDiv.textContent = etudiant;
 
-			// Génère une couleur de fond aléatoire
-			const randomBackgroundColor = randomColor();
-
-			// Applique la couleur de fond à la nouvelle div
-			nouvelleDiv.style.backgroundColor = randomBackgroundColor;
-
 			// Si c'est mon nom
 			if(etudiant == "NOM Prénom"){
 				// Je modifie ma case. Exemple:
 				nouvelleDiv.classList.add('blue');
+			}
+			else{
+				// Génère une couleur de fond aléatoire
+				const randomBackgroundColor = randomColor();
+
+				// Applique la couleur de fond à la nouvelle div
+				nouvelleDiv.style.backgroundColor = randomBackgroundColor;
 			}
 
 			// Ajoute la nouvelle div au DOM (par exemple, à un conteneur)
